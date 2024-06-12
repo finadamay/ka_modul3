@@ -79,6 +79,7 @@
         </div>
     </div>
     <!-- Preloader Start -->
+    @auth
     <header>
         <!-- Header Start -->
         <div class="header-area">
@@ -93,8 +94,8 @@
                         <div class="main-menu d-none d-lg-block">
                             <nav> 
                                 <ul id="navigation">                           
-                                    <li class="active"><a href="/admin">Home</a></li>
-                                    <li class="active"><a href="{{route('products.index')}}">Data Produk</a></li>
+                                    <li class="{{Route::currentRouteNamed('admin') ? 'active' : ''}}"><a href="{{route('admin')}}">Home</a></li>
+                                    <li class="{{Route::currentRouteNamed('products.index') ? 'active' : ''}}"><a href="{{route('products.index')}}">Data Produk</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -110,7 +111,9 @@
             </div>
         </div>
         <!-- Header End -->
-    </header>
+    </header>    
+    @endauth
+    
     <main>
         @yield('content')
     </main>
