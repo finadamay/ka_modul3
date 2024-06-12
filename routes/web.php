@@ -29,6 +29,8 @@ Route::get('/home', function () {
     return view('welcome');
 });
 
+Route::view('products', 'products.index')->name('products.index');
+
 // Route::get('/home', [LoginController::class, 'showLoginForm']);
 Route::post('/login', [LoginController::class, 'processLogin'])->name('login');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
