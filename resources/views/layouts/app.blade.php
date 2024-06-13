@@ -87,20 +87,20 @@
                 <!-- Logo -->
                 <div class="header-left">
                     <div class="logo">
-                        <a href="index.html"><img src="{{ asset('assets/img/splash-custom.png') }}" style="width: 150px;" alt=""></a>
+                        <a href="index.html"><img src="{{ asset('assets/img/WhatsApp Image 2024-06-13 at 18.44.47.jpeg') }}" style="width: 150px;" alt=""></a>
                     </div>
                     <div class="menu-wrapper  d-flex align-items-center">
                         <!-- Main-menu -->
                         <div class="main-menu d-none d-lg-block">
-                            <nav> 
-                                <ul id="navigation">                           
+                            <nav>
+                                <ul id="navigation">
                                     <li class="{{Route::currentRouteNamed('admin') ? 'active' : ''}}"><a href="{{route('admin')}}">Home</a></li>
                                     <li class="{{Route::currentRouteNamed('products.index') ? 'active' : ''}}"><a href="{{route('products.index')}}">Data Produk</a></li>
                                 </ul>
                             </nav>
                         </div>
                     </div>
-                </div> 
+                </div>
                 <div class="header-right d-none d-lg-block">
                     <a href="/logout" class="header-btn2">Logout</a>
                 </div>
@@ -111,13 +111,13 @@
             </div>
         </div>
         <!-- Header End -->
-    </header>    
+    </header>
     @endauth
-    
+
     <main>
         @yield('content')
     </main>
-    <footer>
+    {{-- <footer>
         <!-- Footer Start-->
         <div class="footer-area footer-padding">
             <div class="container">
@@ -194,7 +194,7 @@
 <!-- Scroll Up -->
 <div id="back-top" >
     <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
-</div>
+</div> --}}
 
 <!-- JS here -->
 
@@ -235,7 +235,7 @@
 <script src="{{ asset('assets/js/mail-script.js') }}"></script>
 <script src="{{ asset('assets/js/jquery.ajaxchimp.min.js') }}"></script>
 
-<!-- Jquery Plugins, main Jquery -->	
+<!-- Jquery Plugins, main Jquery -->
 <script src="{{ asset('assets/js/plugins.js') }}"></script>
 <script src="{{ asset('assets/js/main.js') }}"></script>
 
