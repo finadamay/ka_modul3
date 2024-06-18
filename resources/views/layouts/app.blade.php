@@ -87,7 +87,11 @@
                 <!-- Logo -->
                 <div class="header-left">
                     <div class="logo">
+
                         <a href="index.html"><img src="{{ asset('assets/img/REVERSEAS.jpeg^^') }}" style="width: 150px;" alt=""></a>
+
+  
+
                     </div>
                     <div class="menu-wrapper  d-flex align-items-center">
                         <!-- Main-menu -->
@@ -96,11 +100,15 @@
                                 <ul id="navigation">                           
                                     <li class="{{Route::currentRouteNamed('pesanan.index') ? 'active' : ''}}"><a href="{{route('pesanan.index')}}">Data Pesanan</a></li>
                                     <li class="{{Route::currentRouteNamed('products.index') ? 'active' : ''}}"><a href="{{route('products.index')}}">Data Produk</a></li>
+                                    <li class="{{Route::currentRouteNamed('admin') ? 'active' : ''}}"><a href="{{route('admin')}}">Home</a></li>
                                 </ul>
+                  
+                     
+
                             </nav>
                         </div>
                     </div>
-                </div> 
+                </div>
                 <div class="header-right d-none d-lg-block">
                     <a href="/logout" class="header-btn2">Logout</a>
                 </div>
@@ -111,68 +119,15 @@
             </div>
         </div>
         <!-- Header End -->
-    </header>    
+    </header>
     @endauth
-    
+
     <main>
         @yield('content')
     </main>
+
     <footer>
-        {{-- <!-- Footer Start-->
-        <div class="footer-area footer-padding">
-            <div class="container">
-                <div class="row d-flex justify-content-between">
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-                     <div class="single-footer-caption mb-50">
-                       <div class="single-footer-caption mb-30">
-                        <!-- logo -->
-                        <div class="footer-logo mb-35">
-                            <a href="index.html"><img src="{{ asset('assets/img/splash-custom.png') }}" alt="" style="width: 150px"></a>
-                        </div>
-                        <div class="footer-tittle">
-                            <div class="footer-pera">
-                                <p>Tell us about whatever you want to convey, whether it's criticism or suggestion</p>
-                                <p>We happy to listen</p>
-                            </div>
-                        </div>
-                        <!-- social -->
-                        <div class="footer-social">
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
-                <div class="single-footer-caption mb-50">
-                    <div class="footer-tittle">
-                        <h4>Services </h4>
-                        <ul>
-                            <li><a href="#">- Fast Cleaning</a></li>
-                            <li><a href="#">- Deep Cleaning</a></li>
-                            <li><a href="#">- Repainting</a></li>
-                            <li><a href="#">- Repair Unyellowing</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
-                <div class="single-footer-caption mb-50">
-                    <div class="footer-tittle">
-                        <h4>Get in touch</h4>
-                        <ul>
-                            <li class="number"><a href="#">+6289-456-7890</a></li>
-                            <li class="number"><a href="#">+6289-222-3333</a></li>
-                            <li><a href="#">Shore@gmail.com</a></li>
-                            <li><a href="#">Surabaya, Indonesia-151461</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> --}}
+
 <!-- footer-bottom area -->
 <div class="footer-bottom-area section-bg2" data-background="{{ asset('assets/img/gallery/footer-bg.png') }}">
     <div class="container">
@@ -194,7 +149,7 @@
 <!-- Scroll Up -->
 <div id="back-top" >
     <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
-</div>
+</div> --}}
 
 <!-- JS here -->
 
@@ -235,7 +190,7 @@
 <script src="{{ asset('assets/js/mail-script.js') }}"></script>
 <script src="{{ asset('assets/js/jquery.ajaxchimp.min.js') }}"></script>
 
-<!-- Jquery Plugins, main Jquery -->	
+<!-- Jquery Plugins, main Jquery -->
 <script src="{{ asset('assets/js/plugins.js') }}"></script>
 <script src="{{ asset('assets/js/main.js') }}"></script>
 

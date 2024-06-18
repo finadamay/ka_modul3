@@ -14,6 +14,6 @@ class AdminController extends Controller
         $pesananData = Pesanan::all();
 
         // Pass the data to the view and return it
-        return view('admin', compact('pesananData'));
+        return view('pesanan.index', compact('pesananData'));
     }
 }
