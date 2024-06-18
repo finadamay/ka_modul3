@@ -13,7 +13,8 @@ class LoginController extends Controller
     // Show the login form
     public function showLoginForm()
     {
-        return view('login'); // Create a login view (login.blade.php) for the login form
+        if(!auth()->check()) return view('login'); // Create a login view (login.blade.php) for the login form
+        else return redirect(route('pesanan.index'));
     }
 
     // Process the login form
@@ -31,10 +32,11 @@ class LoginController extends Controller
                 // Authentication successful
 
                 // Fetch all data from the Pesanan model
-                $pesananData = Pesanan::all();
+                // $pesananData = Pesanan::all();
 
                 // Pass the data to the view and return it
-                return view('admin', compact('pesananData'));
+                // return view('pesanan.index', compact('pesananData'));
+                return redirect(route('pesanan.index'));
             } else {
                 // dump()
                 // Authentication failed

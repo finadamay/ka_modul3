@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>SHORE</title>
+    <title>REVERSEAS</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
@@ -87,14 +87,14 @@
                 <!-- Logo -->
                 <div class="header-left">
                     <div class="logo">
-                        <a href="index.html"><img src="{{ asset('assets/img/splash-custom.png') }}" style="width: 150px;" alt=""></a>
+                        <a href="index.html"><img src="{{ asset('assets/img/REVERSEAS.jpeg^^') }}" style="width: 150px;" alt=""></a>
                     </div>
                     <div class="menu-wrapper  d-flex align-items-center">
                         <!-- Main-menu -->
                         <div class="main-menu d-none d-lg-block">
                             <nav> 
                                 <ul id="navigation">                           
-                                    <li class="{{Route::currentRouteNamed('admin') ? 'active' : ''}}"><a href="{{route('admin')}}">Home</a></li>
+                                    <li class="{{Route::currentRouteNamed('pesanan.index') ? 'active' : ''}}"><a href="{{route('pesanan.index')}}">Data Pesanan</a></li>
                                     <li class="{{Route::currentRouteNamed('products.index') ? 'active' : ''}}"><a href="{{route('products.index')}}">Data Produk</a></li>
                                 </ul>
                             </nav>
@@ -118,7 +118,7 @@
         @yield('content')
     </main>
     <footer>
-        <!-- Footer Start-->
+        {{-- <!-- Footer Start-->
         <div class="footer-area footer-padding">
             <div class="container">
                 <div class="row d-flex justify-content-between">
@@ -172,7 +172,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 <!-- footer-bottom area -->
 <div class="footer-bottom-area section-bg2" data-background="{{ asset('assets/img/gallery/footer-bg.png') }}">
     <div class="container">

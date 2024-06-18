@@ -10,7 +10,7 @@
             <div class="col-lg-4">
             </div>
             <div class="col-lg-4">
-                <form class="form-contact contact_form" action="{{ route('pesan-download') }}" method="post">
+                <form class="form-contact contact_form" action="{{ route('pesanan.download') }}" method="post">
                     @csrf
                     @if(session('success'))
                         <script>
@@ -29,9 +29,9 @@
                             <td>{{ $nama }}</td>
                         </tr>
                         <tr>
-                            <td>Treatment</td>
+                            <td>Jenis</td>
                             <td>:</td>
-                            <td>{{ $treatment }}</td>
+                            <td>{{ $jenis }}</td>
                         </tr>
                         <tr>
                             <td>Total Perfume</td>
@@ -46,7 +46,7 @@
                     </table>
 
                     <input type="hidden" name="nama" value="{{ $nama }}">
-                    <input type="hidden" name="treatment" value="{{ $treatment }}">
+                    <input type="hidden" name="jenis" value="{{ $jenis }}">
                     <input type="hidden" name="jumlahParfum" value="{{ $jumlahParfum }}">
                     <input type="hidden" name="harga" value="{{ $harga }}">
                     <div class="form-group mt-3 text-center" >

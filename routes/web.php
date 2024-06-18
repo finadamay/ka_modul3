@@ -68,9 +68,8 @@ Route::view('products', 'products.index', [
 Route::post('/login', [LoginController::class, 'processLogin'])->name('login');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::get('/pesan', [PesananController::class, 'showPesananForm'])->name('pesan');
-Route::post('/pesan-add', [PesananController::class, 'store'])->name('pesan-store');
-Route::get('/pesan-hasil', [PesananController::class, 'hasil'])->name('pesan-hasil');
-Route::post('/pesan-download', [PesananController::class, 'download'])->name('pesan-download');
+Route::get('/pesanan/hasil', [PesananController::class, 'hasil'])->name('pesanan.hasil');
+Route::post('/pesanan/download', [PesananController::class, 'download'])->name('pesanan.download');
+Route::resource('pesanan', PesananController::class);
 
 Route::get('/admin', [AdminController::class, 'index'])->name('admin')->middleware('auth');

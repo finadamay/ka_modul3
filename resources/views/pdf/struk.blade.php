@@ -9,7 +9,7 @@
 <body>
     <h2>Detail Pesanan</h2>
     <p>Nama: {{ $nama }}</p>
-    <p>Treatment: {{ $jenis }}</p>
+    <p>Jenis: {{ $jenis }}</p>
     <p>Total Perfume: {{ $jumlahParfum }}</p>
     <p>Harga: {{ $harga }}</p>
 </body>

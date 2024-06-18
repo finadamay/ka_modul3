@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StorePesananRequest;
+use App\Http\Requests\UpdatePesananRequest;
 use Illuminate\Http\Request;
 use App\Models\Pesanan;
 use Dompdf\Dompdf;
@@ -11,56 +13,66 @@ use Illuminate\Support\Facades\Session;
 class PesananController extends Controller
 {
     // Show the pesanan form
-    public function showPesananForm()
+    public function index()
     {
-        return view('pesanan'); 
+        $pesananData = Pesanan::all();
+        return view('pesanan.index', ['pesananData' => $pesananData]); 
     }
 
-    public function store(Request $request)
+    public function create() {
+        return view('pesanan.create');
+    }
+
+    public function show() {
+        //
+    }
+
+    public function store(StorePesananRequest $request)
     {
-        // Validate the form data
-        $request->validate([
-            'nama' => 'required|string',
-            'treatment' => 'required|string',
-            'jumlahParfum' => 'required|numeric|min:1',
-        ]);
+        $harga = Pesanan::calculateHarga($request->jenis, $request->jumlahParfum);
 
-        // Calculate the price based on the treatment and number of shoes
-        $harga = 0;
-        if ($request->input('treatment') === 'regular') {
-            $harga = 30000 * $request->input('jumlahParfum');
-        } elseif ($request->input('treatment') === 'express') {
-            $harga = 50000 * $request->input('jumlahParfum');
-        }
-
-        // Create a new Pesanan instance and save it to the database
         Pesanan::create([
-            'nama' => $request->input('nama'),
-            'jenis' => $request->input('treatment'),
-            'jumlahParfum' => $request->input('jumlahParfum'),
+            'nama' => $request->nama,
+            'jenis' => $request->jenis,
+            'jumlahParfum' => $request->jumlahParfum,
             'harga' => $harga,
         ]);
 
         // Store the data in the session
-        session()->put('nama', $request->input('nama'));
-        session()->put('treatment', $request->input('treatment'));
-        session()->put('jumlahParfum', $request->input('jumlahParfum'));
+        session()->put('nama', $request->nama);
+        session()->put('jenis', $request->jenis);
+        session()->put('jumlahParfum', $request->jumlahParfum);
         session()->put('harga', $harga);
 
         // Redirect to the hasil route
-        return redirect()->route('pesan-hasil')->with('success', 'Terima kasih sudah order!');
+        return redirect()->route('pesanan.hasil')->with('success', 'Terima kasih sudah order!');
+    }
+
+    public function edit(Pesanan $pesanan) {
+        return view('pesanan.edit', ['pesanan' => $pesanan]);
+    }
+
+    public function update(UpdatePesananRequest $request, Pesanan $pesanan) {
+        $harga = Pesanan::calculateHarga($request->jenis, $request->jumlahParfum);
+        $pesanan->update(array_merge($request->validated(), ['harga' => $harga]));
+        return redirect(route('pesanan.index'));
+    }
+    
+    public function destroy(Pesanan $pesanan) {
+        $pesanan->delete();
+        return redirect(route('pesanan.index'));
     }
 
     public function hasil()
     {
         // Retrieve the data from the session
         $nama = session('nama');
-        $treatment = session('treatment');
+        $jenis = session('jenis');
         $jumlahParfum = session('jumlahParfum');
         $harga = session('harga');
 
         // Return the view and pass the data to it
-        return view('hasil', compact('nama', 'treatment', 'jumlahParfum', 'harga'));
+        return view('pesanan.hasil', compact('nama', 'jenis', 'jumlahParfum', 'harga'));
     }
 
     public function download(Request $request)
@@ -68,7 +80,7 @@ class PesananController extends Controller
         // Generate the PDF
         $nama = $request->input('nama'); // Define the $nama variable
         $jumlahParfum = $request->input('jumlahParfum'); // Define the $nama variable
-        $jenis = $request->input('treatment'); // Define the $nama variable
+        $jenis = $request->input('jenis'); // Define the $nama variable
         $harga = $request->input('harga');
 
         // Set the PDF size to A7
@@ -86,7 +98,7 @@ class PesananController extends Controller
         $pdf->stream('invoice.pdf', array('Attachment' => 0));
 
         // Remove the data from the session to avoid showing it again upon page refresh
-        session()->forget(['nama', 'treatment', 'jumlahParfum', 'harga']);
+        session()->forget(['nama', 'jenis', 'jumlahParfum', 'harga']);
 
         // Download the PDF to the user's browser
         // return $pdf->download('struk.pdf');

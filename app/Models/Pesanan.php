@@ -14,4 +14,14 @@ class Pesanan extends Model
     protected $fillable = ['nama', 'jenis', 'jumlahParfum', 'harga'];
 
     public $timestamps = false; // Add this line to disable the timestamps
+
+    public static function calculateHarga($jenis, $jumlahParfum) {
+
+        $harga = [
+            'regular' => 30000,
+            'express' => 50000
+        ];
+
+        return $harga[$jenis] * $jumlahParfum;
+    }
 }
