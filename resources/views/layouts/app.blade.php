@@ -90,20 +90,20 @@
 
                         <a href="index.html"><img src="{{ asset('assets/img/REVERSEAS.jpeg^^') }}" style="width: 150px;" alt=""></a>
 
-  
+
 
                     </div>
                     <div class="menu-wrapper  d-flex align-items-center">
                         <!-- Main-menu -->
                         <div class="main-menu d-none d-lg-block">
-                            <nav> 
-                                <ul id="navigation">                           
+                            <nav>
+                                <ul id="navigation">
                                     <li class="{{Route::currentRouteNamed('pesanan.index') ? 'active' : ''}}"><a href="{{route('pesanan.index')}}">Data Pesanan</a></li>
                                     <li class="{{Route::currentRouteNamed('products.index') ? 'active' : ''}}"><a href="{{route('products.index')}}">Data Produk</a></li>
                                     <li class="{{Route::currentRouteNamed('admin') ? 'active' : ''}}"><a href="{{route('admin')}}">Home</a></li>
                                 </ul>
-                  
-                     
+
+
 
                             </nav>
                         </div>
@@ -125,31 +125,6 @@
     <main>
         @yield('content')
     </main>
-
-    <footer>
-
-<!-- footer-bottom area -->
-<div class="footer-bottom-area section-bg2" data-background="{{ asset('assets/img/gallery/footer-bg.png') }}">
-    <div class="container">
-        <div class="footer-border">
-           <div class="row d-flex align-items-center">
-               <div class="col-xl-12 ">
-                   <div class="footer-copy-right text-center">
-                       <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  <!-- Footer End-->
-</footer>
-<!-- Scroll Up -->
-<div id="back-top" >
-    <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
-</div> --}}
 
 <!-- JS here -->
 
