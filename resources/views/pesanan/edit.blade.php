@@ -32,9 +32,11 @@
                             <p>Jenis</p>
                             <div class="form-group">
                                 <select class="form-control" name="jenis" id="jenis" required>
-                                    <option value="" disabled selected style="width: 300px">Pilih Jenis</option>
-                                    <option value="regular" style="width: 300px" selected="{{$pesanan->jenis === 'regular'}}">Regular</option>
-                                    <option value="express" style="width: 300px" selected="{{$pesanan->jenis === 'express'}}">Express</option>
+                                    <option value="" disabled selected style="width: 400px">Pilih Jenis</option>
+                                    <option value="love distopia" style="width: 400px" selected="{{$pesanan->jenis === 'love distopia'}}">Love Distopia</option>
+                                    <option value="coconut scent" style="width: 400px" selected="{{$pesanan->jenis === 'coconut scent'}}">Coconut Scent</option>
+                                    <option value="vicious pain" style="width: 400px" selected="{{$pesanan->jenis === 'vicious pain'}}">Vicious Pain</option>
+                                    <option value="ciello" style="width: 400px" selected="{{$pesanan->jenis === 'ciello'}}">Ciello</option>
                                 </select>
                             </div>
                         </div>

@@ -32,35 +32,30 @@ Route::get('/home', function () {
 Route::view('products', 'products.index', [
     'products' => [
        (object) [
-        'title' => 'Test',
-        'image' => 'https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=1408&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        'price' => 999,
-        'in_stock' => 23
+        'title' => 'Love Distopia',
+        'image' => 'assets/img/distopia.jpg',
+        'price' => 200,
+        'in_stock' => 24
        ],
        (object) [
-        'title' => 'Versace Eros',
-        'image' => 'https://images.unsplash.com/photo-1587017539504-67cfbddac569?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        'price' => 123,
-        'in_stock' => 12
+        'title' => 'Coconut Scent',
+        'image' => 'assets/img/Coconut.jpeg',
+        'price' => 150,
+        'in_stock' => 30
        ],
        (object) [
-        'title' => 'Test3',
-        'image' => 'https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        'price' => 567,
-        'in_stock' => 65
+        'title' => 'Vicious Pain',
+        'image' => 'assets/img/vicious.jpeg',
+        'price' => 300,
+        'in_stock' => 25
        ],
        (object) [
-        'title' => 'Versace Eros',
-        'image' => 'https://images.unsplash.com/photo-1587017539504-67cfbddac569?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        'price' => 123,
-        'in_stock' => 12
+        'title' => 'Ciello',
+        'image' => 'assets/img/ciello.jpg',
+        'price' => 250,
+        'in_stock' => 40
        ],
-       (object) [
-        'title' => 'Test3',
-        'image' => 'https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        'price' => 567,
-        'in_stock' => 65
-       ],
+
     ]
 ])->name('products.index');
 
