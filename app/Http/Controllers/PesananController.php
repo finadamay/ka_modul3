@@ -16,7 +16,7 @@ class PesananController extends Controller
     public function index()
     {
         $pesananData = Pesanan::all();
-        return view('pesanan.index', ['pesananData' => $pesananData]); 
+        return view('pesanan.index', ['pesananData' => $pesananData]);
     }
 
     public function create() {
@@ -57,7 +57,7 @@ class PesananController extends Controller
         $pesanan->update(array_merge($request->validated(), ['harga' => $harga]));
         return redirect(route('pesanan.index'));
     }
-    
+
     public function destroy(Pesanan $pesanan) {
         $pesanan->delete();
         return redirect(route('pesanan.index'));

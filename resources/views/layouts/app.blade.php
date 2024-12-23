@@ -87,11 +87,7 @@
                 <!-- Logo -->
                 <div class="header-left">
                     <div class="logo">
-
                         <a href="index.html"><img src="{{ asset('assets/img/REVERSEAS.jpeg^^') }}" style="width: 150px;" alt=""></a>
-
-
-
                     </div>
                     <div class="menu-wrapper  d-flex align-items-center">
                         <!-- Main-menu -->
@@ -102,9 +98,6 @@
                                     <li class="{{Route::currentRouteNamed('products.index') ? 'active' : ''}}"><a href="{{route('products.index')}}">Data Produk</a></li>
                                     <li class="{{Route::currentRouteNamed('admin') ? 'active' : ''}}"><a href="{{route('admin')}}">Home</a></li>
                                 </ul>
-
-
-
                             </nav>
                         </div>
                     </div>

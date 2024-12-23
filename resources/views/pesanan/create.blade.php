@@ -9,7 +9,7 @@
             </div>
 
             <div class="col-lg-8 mx-auto">
-                @if ($errors->any())
+                {{-- @if ($errors->any())
                     <div class="alert alert-danger">
                         <ul>
                             @foreach ($errors->all() as $error)
@@ -17,7 +17,9 @@
                             @endforeach
                         </ul>
                     </div>
-                @endif
+                @endif --}}
+
+                {{-- dd('halo') --}}
                 <form class="form-contact contact_form" action="{{ route('pesanan.store') }}" method="post">
                     @csrf
                     <div class="row">

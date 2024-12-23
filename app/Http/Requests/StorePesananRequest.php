@@ -23,7 +23,7 @@ class StorePesananRequest extends FormRequest
     {
         return [
             'nama' => ['required', 'max:255'],
-            'jenis' => ['required', 'in:regular,express'],
+            'jenis' => ['required', 'in:regular,express,love distopia,coconut scent,vicious pain,ciello'], //udah
             'jumlahParfum' => ['required', 'numeric'],
         ];
     }
