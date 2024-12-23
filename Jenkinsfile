@@ -20,13 +20,15 @@ pipeline {
             }
         }
 
-        stage('push Docker Image') {
+        stage('Push Docker Image') {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'dockerhub-jenkins',
-                 usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]){
+                 usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
                     bat """
-                    echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+                    echo %DOCKER_PASSWORD% > docker-password.txt
+                    docker login -u %DOCKER_USERNAME% --password-stdin < docker-password.txt
                     docker push ${DOCKER_IMAGE}
+                    del docker-password.txt
                     """
                 }
             }
