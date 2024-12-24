@@ -34,17 +34,17 @@
                             <div class="form-group">
                                 <select class="form-control" name="jenis" id="jenis" required>
                                     <option value="" disabled selected style="width: 300px">Pilih Jenis</option>
-                                    <option value="regular" style="width: 300px">Regular</option>
-                                    <option value="express" style="width: 300px">Express</option>
-                                    <option value="love distopia" style="width: 300px">Love Distopia</option>
+                                    <option value="gantungan kunci - ukki" style="width: 300px">Gantungan Kunci - UKKI</option>
+                                    <option value="jersey - ukm badminton" style="width: 300px">Jersey - UKM Badminton</option>
+                                    {{-- <option value="love distopia" style="width: 300px">Love Distopia</option>
                                     <option value="coconut scent" style="width: 300px">Coconut Scent</option>
                                     <option value="vicious pain" style="width: 300px">Vicious Pain</option>
-                                    <option value="ciello" style="width: 300px">Ciello</option>
+                                    <option value="ciello" style="width: 300px">Ciello</option> --}}
                                 </select>
                             </div>
                         </div>
                         <div class="col-12">
-                            <p>Total Perfume</p>
+                            <p>Total Barang</p>
                             <div class="form-group">
                                 <input class="form-control valid" name="jumlahParfum" id="jumlahParfum" type="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your total perfumes'" placeholder="Enter your total shoes" required>
                             </div>

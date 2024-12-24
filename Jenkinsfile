@@ -33,5 +33,36 @@ pipeline {
                 }
             }
         }
+
+        stage('Notify Teams') {
+            steps {
+                script {
+                    def message = """
+                    {
+                        "title": "Jenkins Build Notification",
+                        "text": "Build #${env.BUILD_NUMBER} has been pushed to Docker registry.",
+                        "themeColor": "0076D7",
+                        "sections": [
+                            {
+                                "activityTitle": "Pipeline Notification",
+                                "activitySubtitle": "Build Status: Success",
+                                "facts": [
+                                    { "name": "Job Name", "value": "${env.JOB_NAME}" },
+                                    { "name": "Build Number", "value": "${env.BUILD_NUMBER}" },
+                                    { "name": "Docker Image", "value": "${DOCKER_IMAGE}:${env.BUILD_NUMBER}" }
+                                ]
+                            }
+                        ]
+                    }
+                     """
+                    httpRequest(
+                        url: "${TEAMS_WEBHOOK_URL}",
+                        httpMode: 'POST',
+                        contentType: 'APPLICATION_JSON',
+                        requestBody: message
+                    )
+                }
+            }
+        }
     }
 }

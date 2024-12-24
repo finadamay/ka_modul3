@@ -34,7 +34,7 @@
                             <td>{{ $jenis }}</td>
                         </tr>
                         <tr>
-                            <td>Total Perfume</td>
+                            <td>Total Barang</td>
                             <td>:</td>
                             <td>{{ $jumlahParfum }}</td>
                         </tr>
@@ -53,7 +53,7 @@
                         <button type="submit" class="button button-contactForm boxed-btn" style="margin-top: 20px;">Download Bukti Pesanan</button>
                     </div>
                 </form>
-                
+
             </div>
         </div>
     </div>

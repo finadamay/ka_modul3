@@ -15,7 +15,7 @@
                             <th>ID</th>
                             <th>Nama</th>
                             <th>Jenis</th>
-                            <th>Jumlah Parfum</th>
+                            <th>Jumlah Barang</th>
                             <th>Harga</th>
                         </tr>
                     </thead>

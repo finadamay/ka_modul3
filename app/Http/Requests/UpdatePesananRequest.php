@@ -23,7 +23,7 @@ class UpdatePesananRequest extends FormRequest
     {
         return [
             'nama' => ['required', 'max:255'],
-            'jenis' => ['required', 'in:regular,express,Love Distopia'],
+            'jenis' => ['required', 'in:gantungan kunci - ukki,jersey - ukm badminton'],
             'jumlahParfum' => ['required', 'numeric'],
         ];
     }

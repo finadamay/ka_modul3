@@ -23,7 +23,7 @@ class StorePesananRequest extends FormRequest
     {
         return [
             'nama' => ['required', 'max:255'],
-            'jenis' => ['required', 'in:regular,express,love distopia,coconut scent,vicious pain,ciello'], //udah
+            'jenis' => ['required', 'in:gantungan kunci - ukki, jersey - ukm badminton'], //udah
             'jumlahParfum' => ['required', 'numeric'],
         ];
     }

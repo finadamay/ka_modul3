@@ -19,12 +19,8 @@ class Pesanan extends Model
     public static function calculateHarga($jenis, $jumlahParfum) {
 
         $harga = [
-            'regular' => 30000,
-            'express' => 50000,
-            'love distopia' => 7000,
-            'coconut scent' => 7000,
-            'vicious pain' => 5000,
-            'ciello' => 7000
+            'gantungan kunci - ukki' => 5000,
+            'jersey - ukm badminton' => 75000
         ];
 
         //dah gitu ta?

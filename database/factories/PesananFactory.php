@@ -18,7 +18,7 @@ class PesananFactory extends Factory
     {
         return [
             'nama' => $this->faker->word,
-            'jenis' => $this->faker->randomElement(['regular', 'express', 'Love Distopia']),
+            'jenis' => $this->faker->randomElement(['gantungan kunci - ukki', 'jersey - ukm badminton']),
             'jumlahParfum' => $this->faker->randomNumber(2),
             'harga' => $this->faker->randomNumber(4),
         ];

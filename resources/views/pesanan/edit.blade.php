@@ -7,7 +7,7 @@
             <div class="col-12">
                 <h2 class="contact-title text-center">Pesan</h2>
             </div>
-                
+
             <div class="col-lg-8 mx-auto">
                 @if ($errors->any())
                     <div class="alert alert-danger">
@@ -33,15 +33,15 @@
                             <div class="form-group">
                                 <select class="form-control" name="jenis" id="jenis" required>
                                     <option value="" disabled selected style="width: 400px">Pilih Jenis</option>
-                                    <option value="love distopia" style="width: 400px" selected="{{$pesanan->jenis === 'love distopia'}}">Love Distopia</option>
-                                    <option value="coconut scent" style="width: 400px" selected="{{$pesanan->jenis === 'coconut scent'}}">Coconut Scent</option>
-                                    <option value="vicious pain" style="width: 400px" selected="{{$pesanan->jenis === 'vicious pain'}}">Vicious Pain</option>
-                                    <option value="ciello" style="width: 400px" selected="{{$pesanan->jenis === 'ciello'}}">Ciello</option>
+                                    <option value="ganci" style="width: 400px" selected="{{$pesanan->jenis === 'gantungan kunci - ukki'}}">Gantungan Kunci - UKKI</option>
+                                    <option value="jersey" style="width: 400px" selected="{{$pesanan->jenis === 'jersey - ukm badminton'}}">Jersey - UKM Badminton</option>
+                                    {{-- <option value="vicious pain" style="width: 400px" selected="{{$pesanan->jenis === 'vicious pain'}}">Vicious Pain</option>
+                                    <option value="ciello" style="width: 400px" selected="{{$pesanan->jenis === 'ciello'}}">Ciello</option> --}}
                                 </select>
                             </div>
                         </div>
                         <div class="col-12">
-                            <p>Total Perfume</p>
+                            <p>Total Barang</p>
                             <div class="form-group">
                                 <input class="form-control valid" name="jumlahParfum" id="jumlahParfum" value="{{$pesanan->jumlahParfum}}" type="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your total shoes'" placeholder="Enter your total shoes" required>
                             </div>
