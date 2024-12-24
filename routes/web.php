@@ -32,18 +32,18 @@ Route::get('/home', function () {
 Route::view('products', 'products.index', [
     'products' => [
        (object) [
-        'title' => 'Love Distopia',
-        'image' => 'assets/img/distopia.jpg',
-        'price' => 200,
+        'title' => 'Gantungan Kunci - UKKI',
+        'image' => 'assets/img/ganci.jpeg',
+        'price' => 15000,
         'in_stock' => 24
        ],
        (object) [
-        'title' => 'Coconut Scent',
-        'image' => 'assets/img/Coconut.jpeg',
-        'price' => 150,
+        'title' => 'Jersey - UKM Badminton',
+        'image' => 'assets/img/jersey.jpeg',
+        'price' => 100000,
         'in_stock' => 30
        ],
-       (object) [
+       /* (object) [
         'title' => 'Vicious Pain',
         'image' => 'assets/img/vicious.jpeg',
         'price' => 300,
@@ -55,7 +55,7 @@ Route::view('products', 'products.index', [
         'price' => 250,
         'in_stock' => 40
        ],
-
+ */
     ]
 ])->name('products.index');
 
