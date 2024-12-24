@@ -56,7 +56,7 @@ pipeline {
                     }
                      """
                     httpRequest(
-                        url: "${TEAMS_WEBHOOK_URL}",
+                        url: "${https://telkomuniversityofficial.webhook.office.com/webhookb2/64c1ccfe-a88b-43f0-85f9-2ace042b92ae@90affe0f-c2a3-4108-bb98-6ceb4e94ef15/JenkinsCI/765a8c2006b143b5a2da1d2d5812fcd7/5a99cc21-b146-4641-9092-a4fc005d24ba/V2u5qt6kaonZZ9b_1zVyqo3Tzx9K1DkJQO8sQ6bjw1OYo1}",
                         httpMode: 'POST',
                         contentType: 'APPLICATION_JSON',
                         requestBody: message
